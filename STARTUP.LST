@@ -1,0 +1,545 @@
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN STARTUP.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE STARTUP.A51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+9000                   1     ORG 9000H
+9000 7583E8            2               MOV DPH, #0E8H
+9003 758200            3               MOV DPL, #00H
+9006 747E              4               MOV A, #7EH
+                       5               
+9008 F0                6               MOVX @DPTR, A
+                       7               
+9009 028348            8               LJMP LED
+                       9             
+9020                  10     ORG 9020H
+9020 7583E8           11               MOV DPH, #0E8H
+9023 758200           12               MOV DPL, #00H
+9026 740C             13               MOV A, #0CH
+                      14               
+9028 F0               15               MOVX @DPTR, A
+                      16             
+9029 028348           17               LJMP LED
+                      18     
+9040                  19     ORG 9040H
+9040 7583E8           20               MOV DPH, #0E8H
+9043 758200           21               MOV DPL, #00H
+9046 74B6             22               MOV A, #0B6H
+                      23               
+9048 F0               24               MOVX @DPTR, A
+                      25               
+9049 028348           26               LJMP LED
+                      27               
+9060                  28     ORG 9060H
+9060 7583E8           29               MOV DPH, #0E8H
+9063 758200           30               MOV DPL, #00H
+9066 749E             31               MOV A, #9EH
+                      32               
+9068 F0               33               MOVX @DPTR, A
+                      34               
+9069 028348           35               LJMP LED
+                      36     
+9080                  37     ORG 9080H
+9080 7583E8           38               MOV DPH, #0E8H
+9083 758200           39               MOV DPL, #00H
+9086 74CC             40               MOV A, #0CCH
+                      41               
+9088 F0               42               MOVX @DPTR, A
+                      43               
+9089 028348           44               LJMP LED
+                      45     
+90A0                  46     ORG 90A0H
+90A0 7583E8           47               MOV DPH, #0E8H
+90A3 758200           48               MOV DPL, #00H
+90A6 74DA             49               MOV A, #0DAH
+                      50               
+90A8 F0               51               MOVX @DPTR, A
+                      52               
+90A9 028348           53               LJMP LED
+                      54     
+90C0                  55     ORG 90C0H
+90C0 7583E8           56               MOV DPH, #0E8H
+90C3 758200           57               MOV DPL, #00H
+90C6 74FA             58               MOV A, #0FAH
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     2
+
+                      59               
+90C8 F0               60               MOVX @DPTR, A
+                      61               
+90C9 028348           62               LJMP LED
+                      63               
+90E0                  64     ORG 90E0H
+90E0 7583E8           65               MOV DPH, #0E8H
+90E3 758200           66               MOV DPL, #00H
+90E6 740E             67               MOV A, #0EH
+                      68               
+90E8 F0               69               MOVX @DPTR, A
+                      70               
+90E9 028348           71               LJMP LED
+                      72               
+9100                  73     ORG 9100H
+9100 7583E8           74               MOV DPH, #0E8H
+9103 758200           75               MOV DPL, #00H
+9106 74FE             76               MOV A, #0FEH
+                      77               
+9108 F0               78               MOVX @DPTR, A
+                      79               
+9109 028348           80               LJMP LED
+                      81               
+9120                  82     ORG 9120H
+9120 7583E8           83               MOV DPH, #0E8H
+9123 758200           84               MOV DPL, #00H
+9126 74DE             85               MOV A, #0DEH
+                      86               
+9128 F0               87               MOVX @DPTR, A
+                      88               
+9129 028348           89               LJMP LED
+                      90               
+8100                  91     ORG 8100H
+8100 D2AF             92               SETB IE.7
+8102 D2A9             93               SETB IE.1
+                      94     
+8104 758901           95               MOV TMOD,#01H         
+8107 758C4C           96               MOV TH0, #4CH
+810A 758A04           97               MOV TL0, #04H
+810D D28C             98               SETB TR0
+                      99               
+810F 7583E8          100               MOV DPH, #0E8H
+8112 758203          101               MOV DPL, #03H
+8115 7482            102               MOV A, #82H
+8117 F0              103               MOVX @DPTR,A
+                     104               
+8118 758395          105               MOV DPH, #95H
+811B 758200          106               MOV DPL, #00H
+811E 741E            107               MOV A, #30
+8120 F0              108               MOVX @DPTR,A
+                     109               
+8121 758395          110               MOV DPH, #95H
+8124 758201          111               MOV DPL, #01H
+8127 743A            112               MOV A, #58
+8129 F0              113               MOVX @DPTR,A
+                     114               
+812A 758395          115               MOV DPH, #95H
+812D 758202          116               MOV DPL, #02H
+8130 740C            117               MOV A, #12
+8132 F0              118               MOVX @DPTR,A
+                     119               
+8133 7A00            120               MOV R2, #00
+8135 7800            121               MOV R0, #00
+                     122               
+8137                 123     LOOP: 
+                     124     
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     3
+
+8137 7583E8          125               MOV DPH, #0E8H
+813A 758201          126               MOV DPL, #01H
+813D E0              127               MOVX A,@DPTR
+813E 75F008          128               MOV B,#8
+8141 84              129               DIV AB
+8142 75F002          130               MOV B,#2
+8145 84              131               DIV AB
+8146 A9F0            132               MOV R1,B ;START
+8148 75F002          133               MOV B,#2
+814B 84              134               DIV AB
+814C 75F002          135               MOV B,#2
+814F 84              136               DIV AB
+8150 ABF0            137               MOV R3,B ;STOP
+8152 75F002          138               MOV B,#2
+8155 84              139               DIV AB
+8156 75F002          140               MOV B,#2
+8159 84              141               DIV AB
+815A ADF0            142               MOV R5,B ;MODE
+                     143     
+815C ED              144               MOV A,R5
+815D 7004            145               JNZ CSTOP
+815F 5127            146           ACALL CLOCK
+8161 8002            147               JMP UP
+                     148     
+8163 51BC            149     CSTOP: ACALL STOP
+                     150                
+8165 EA              151     UP:   MOV A, R2
+8166 9404            152               SUBB A, #4
+8168 7069            153               JNZ WRAP
+816A 758395          154               MOV DPH, #95H
+816D 758200          155               MOV DPL, #00H
+8170 E0              156               MOVX A,@DPTR
+8171 04              157               INC A
+8172 F0              158               MOVX @DPTR,A
+                     159               
+8173 E9              160               MOV A,R1
+8174 6009            161               JZ SKIP
+8176 758395          162               MOV DPH, #95H
+8179 758203          163               MOV DPL, #03H
+817C E0              164               MOVX A,@DPTR
+817D 04              165               INC A
+817E F0              166               MOVX @DPTR,A
+                     167               
+817F 7A00            168     SKIP: MOV R2, #00
+                     169               
+8181 758395          170           MOV DPH, #95H
+8184 758200          171               MOV DPL, #00H
+8187 E0              172               MOVX A,@DPTR
+8188 943C            173               SUBB A, #60
+818A 7047            174               JNZ WRAP
+818C 758395          175               MOV DPH, #95H
+818F 758201          176               MOV DPL, #01H
+8192 E0              177               MOVX A,@DPTR
+8193 04              178               INC A
+8194 F0              179               MOVX @DPTR,A
+                     180               
+8195 758395          181               MOV DPH, #95H
+8198 758201          182               MOV DPL, #01H
+819B E0              183               MOVX A,@DPTR
+                     184               
+819C 943C            185               SUBB A, #60
+819E FE              186               MOV R6,A
+                     187               
+819F 758395          188               MOV DPH, #95H
+81A2 758200          189               MOV DPL, #00H
+81A5 7400            190               MOV A,#00
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     4
+
+81A7 F0              191               MOVX @DPTR,A
+                     192               
+81A8 EE              193               MOV A,R6
+81A9 7028            194               JNZ WRAP
+                     195               
+81AB 758395          196               MOV DPH, #95H
+81AE 758202          197               MOV DPL, #02H
+81B1 E0              198               MOVX A,@DPTR
+81B2 04              199               INC A
+81B3 F0              200               MOVX @DPTR,A
+                     201               
+81B4 758395          202               MOV DPH, #95H
+81B7 758202          203               MOV DPL, #02H
+81BA E0              204               MOVX A,@DPTR
+81BB 940D            205               SUBB A, #13
+81BD FE              206               MOV R6,A
+                     207               
+81BE 758395          208               MOV DPH, #95H
+81C1 758201          209               MOV DPL, #01H
+81C4 7400            210               MOV A,#00
+81C6 F0              211               MOVX @DPTR,A
+                     212               
+81C7 EE              213               MOV A,R6
+81C8 7009            214               JNZ WRAP
+81CA 758395          215               MOV DPH, #95H
+81CD 758202          216               MOV DPL, #02H
+81D0 7401            217               MOV A,#01
+81D2 F0              218               MOVX @DPTR,A
+                     219               
+81D3                 220     WRAP:
+81D3 758395          221               MOV DPH, #95H
+81D6 758203          222               MOV DPL, #03H
+81D9 E0              223               MOVX A,@DPTR
+81DA 943C            224               SUBB A, #60
+81DC 7047            225               JNZ WRAP1
+81DE 758395          226               MOV DPH, #95H
+81E1 758204          227               MOV DPL, #04H
+81E4 E0              228               MOVX A,@DPTR
+81E5 04              229               INC A
+81E6 F0              230               MOVX @DPTR,A
+                     231               
+81E7 758395          232               MOV DPH, #95H
+81EA 758204          233               MOV DPL, #04H
+81ED E0              234               MOVX A,@DPTR
+                     235               
+81EE 943C            236               SUBB A, #60
+81F0 FE              237               MOV R6,A
+                     238               
+81F1 758395          239               MOV DPH, #95H
+81F4 758203          240               MOV DPL, #03H
+81F7 7400            241               MOV A,#00
+81F9 F0              242               MOVX @DPTR,A
+                     243               
+81FA EE              244               MOV A,R6
+81FB 7028            245               JNZ WRAP1
+                     246               
+81FD 758395          247               MOV DPH, #95H
+8200 758205          248               MOV DPL, #05H
+8203 E0              249               MOVX A,@DPTR
+8204 04              250               INC A
+8205 F0              251               MOVX @DPTR,A
+                     252               
+8206 758395          253               MOV DPH, #95H
+8209 758205          254               MOV DPL, #05H
+820C E0              255               MOVX A,@DPTR
+820D 940D            256               SUBB A, #13
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     5
+
+820F FE              257               MOV R6,A
+                     258               
+8210 758395          259               MOV DPH, #95H
+8213 758204          260               MOV DPL, #04H
+8216 7400            261               MOV A,#00
+8218 F0              262               MOVX @DPTR,A
+                     263               
+8219 EE              264               MOV A,R6
+821A 7009            265               JNZ WRAP1
+821C 758395          266               MOV DPH, #95H
+821F 758205          267               MOV DPL, #05H
+8222 7401            268               MOV A,#01
+8224 F0              269               MOVX @DPTR,A
+                     270               
+8225 2137            271     WRAP1:JMP LOOP
+                     272     
+                     273     
+                     274               
+                     275               
+                     276              ;RESET STOPWATCH TO 00:00:00
+8227 758395          277     CLOCK:MOV DPH, #95H
+822A 758203          278               MOV DPL, #03H
+822D 7400            279               MOV A, #0
+822F F0              280               MOVX @DPTR,A
+                     281               
+8230 758395          282               MOV DPH, #95H
+8233 758204          283               MOV DPL, #04H
+8236 7400            284               MOV A, #0
+8238 F0              285               MOVX @DPTR,A
+                     286               
+8239 758395          287               MOV DPH, #95H
+823C 758205          288               MOV DPL, #05H
+823F 7400            289               MOV A, #0
+8241 F0              290               MOVX @DPTR,A
+                     291               
+                     292               
+                     293               ;MINUTES
+8242 7583E8          294               MOV DPH, #0E8H
+8245 758202          295               MOV DPL, #02H
+8248 74FE            296               MOV A, #11111110B
+824A F0              297               MOVX @DPTR, A ;grounding 10s place cathode
+                     298               
+824B 758395          299               MOV DPH, #95H
+824E 758201          300               MOV DPL, #01H
+8251 E0              301               MOVX A,@DPTR
+8252 75F00A          302               MOV B,#10
+8255 84              303               DIV AB                ;quotient in accumulator, pass to print
+8256 AFF0            304               MOV R7,B              ;remainder stored in R7 for later
+                     305               
+8258 7149            306               ACALL DELAY
+825A 7135            307           ACALL PRINT   ;printing the 10s digit 
+                     308               
+825C 7583E8          309               MOV DPH, #0E8H
+825F 758202          310               MOV DPL, #02H
+8262 74FB            311               MOV A, #11111011B
+8264 F0              312               MOVX @DPTR, A ;grounding 1s place cathode
+                     313               
+8265 EF              314               MOV A,R7
+8266 7149            315               ACALL DELAY
+8268 7135            316           ACALL PRINT ;printing 1s digit
+                     317               
+                     318               
+                     319               ;SECONDS
+826A 7583E8          320               MOV DPH, #0E8H
+826D 758202          321               MOV DPL, #02H
+8270 74F7            322               MOV A, #11110111B
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     6
+
+8272 F0              323               MOVX @DPTR, A ;grounding 10s place cathode
+                     324               
+8273 758395          325               MOV DPH, #95H
+8276 758200          326               MOV DPL, #00H
+8279 E0              327               MOVX A,@DPTR
+827A 75F00A          328               MOV B,#10
+827D 84              329               DIV AB                ;quotient in accumulator, pass to print
+827E AFF0            330               MOV R7,B              ;remainder stored in R7 for later
+                     331               
+8280 7149            332               ACALL DELAY
+8282 7135            333           ACALL PRINT   ;printing the 10s digit 
+                     334               
+8284 7583E8          335               MOV DPH, #0E8H
+8287 758202          336               MOV DPL, #02H
+828A 74EF            337               MOV A, #11101111B
+828C F0              338               MOVX @DPTR, A ;grounding 1s place cathode
+                     339               
+828D EF              340               MOV A,R7
+828E 7149            341               ACALL DELAY
+8290 7135            342           ACALL PRINT ;printing 1s digit
+                     343               
+                     344               
+                     345               ;HOURS
+8292 7583E8          346               MOV DPH, #0E8H
+8295 758202          347               MOV DPL, #02H
+8298 74DF            348               MOV A, #11011111B
+829A F0              349               MOVX @DPTR, A ;grounding 10s place cathode
+                     350               
+829B 758395          351               MOV DPH, #95H
+829E 758202          352               MOV DPL, #02H
+82A1 E0              353               MOVX A,@DPTR
+82A2 75F00A          354               MOV B,#10
+82A5 84              355               DIV AB                ;quotient in accumulator, pass to print
+82A6 AFF0            356               MOV R7,B              ;remainder stored in R7 for later
+                     357               
+82A8 7149            358               ACALL DELAY
+82AA 7135            359           ACALL PRINT   ;printing the 10s digit 
+                     360               
+82AC 7583E8          361               MOV DPH, #0E8H
+82AF 758202          362               MOV DPL, #02H
+82B2 74FD            363               MOV A, #11111101B
+82B4 F0              364               MOVX @DPTR, A ;grounding 1s place cathode
+                     365               
+82B5 EF              366               MOV A,R7
+82B6 7149            367               ACALL DELAY
+82B8 7135            368           ACALL PRINT ;printing 1s digit
+                     369               
+82BA ED              370               MOV A,R5
+82BB 22              371               RET
+                     372     
+                     373     
+82BC                 374     STOP:
+                     375               ;MINUTES
+82BC 7583E8          376               MOV DPH, #0E8H
+82BF 758202          377               MOV DPL, #02H
+82C2 74FE            378               MOV A, #11111110B
+82C4 F0              379               MOVX @DPTR, A ;grounding 10s place cathode
+                     380               
+82C5 758395          381               MOV DPH, #95H
+82C8 758204          382               MOV DPL, #04H
+82CB E0              383               MOVX A,@DPTR
+82CC 75F00A          384               MOV B,#10
+82CF 84              385               DIV AB                ;quotient in accumulator, pass to print
+82D0 AFF0            386               MOV R7,B              ;remainder stored in R7 for later
+                     387               
+82D2 7149            388               ACALL DELAY
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     7
+
+82D4 7135            389           ACALL PRINT   ;printing the 10s digit 
+                     390               
+82D6 7583E8          391               MOV DPH, #0E8H
+82D9 758202          392               MOV DPL, #02H
+82DC 74FB            393               MOV A, #11111011B
+82DE F0              394               MOVX @DPTR, A ;grounding 1s place cathode
+                     395               
+82DF EF              396               MOV A,R7
+82E0 7149            397               ACALL DELAY
+82E2 7135            398           ACALL PRINT ;printing 1s digit
+                     399               
+                     400               
+                     401               ;SECONDS
+82E4 7583E8          402               MOV DPH, #0E8H
+82E7 758202          403               MOV DPL, #02H
+82EA 74F7            404               MOV A, #11110111B
+82EC F0              405               MOVX @DPTR, A ;grounding 10s place cathode
+                     406               
+82ED 758395          407               MOV DPH, #95H
+82F0 758203          408               MOV DPL, #03H
+82F3 E0              409               MOVX A,@DPTR
+82F4 75F00A          410               MOV B,#10
+82F7 84              411               DIV AB                ;quotient in accumulator, pass to print
+82F8 AFF0            412               MOV R7,B              ;remainder stored in R7 for later
+                     413               
+82FA 7149            414               ACALL DELAY
+82FC 7135            415           ACALL PRINT   ;printing the 10s digit 
+                     416               
+82FE 7583E8          417               MOV DPH, #0E8H
+8301 758202          418               MOV DPL, #02H
+8304 74EF            419               MOV A, #11101111B
+8306 F0              420               MOVX @DPTR, A ;grounding 1s place cathode
+                     421               
+8307 EF              422               MOV A,R7
+8308 7149            423               ACALL DELAY
+830A 7135            424           ACALL PRINT ;printing 1s digit
+                     425               
+                     426               
+                     427               ;HOURS
+830C 7583E8          428               MOV DPH, #0E8H
+830F 758202          429               MOV DPL, #02H
+8312 74DF            430               MOV A, #11011111B
+8314 F0              431               MOVX @DPTR, A ;grounding 10s place cathode
+                     432               
+8315 758395          433               MOV DPH, #95H
+8318 758205          434               MOV DPL, #05H
+831B E0              435               MOVX A,@DPTR
+831C 75F00A          436               MOV B,#10
+831F 84              437               DIV AB                ;quotient in accumulator, pass to print
+8320 AFF0            438               MOV R7,B              ;remainder stored in R7 for later
+                     439               
+8322 7149            440               ACALL DELAY
+8324 7135            441           ACALL PRINT   ;printing the 10s digit 
+                     442               
+8326 7583E8          443               MOV DPH, #0E8H
+8329 758202          444               MOV DPL, #02H
+832C 74FD            445               MOV A, #11111101B
+832E F0              446               MOVX @DPTR, A ;grounding 1s place cathode
+                     447               
+832F EF              448               MOV A,R7
+8330 7149            449               ACALL DELAY
+8332 7135            450           ACALL PRINT ;printing 1s digit
+8334 22              451               RET
+                     452     
+8335                 453     PRINT:
+8335 758390          454               MOV DPH, #90H
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     8
+
+8338 758200          455               MOV DPL, #00H
+833B 75F020          456               MOV B,#32                     ;locate which subroutine to call, width of 20H or 3
+                             2
+833E A4              457               MUL AB
+833F FC              458               MOV R4,A                      ;R4 now stores the lower nibble of product, we firs
+                             t handle the upper nibble at B
+8340 E583            459               MOV A,DPH
+8342 25F0            460               ADD A,B                       ;adding upper nibble and moving to DPH
+8344 F583            461               MOV DPH,A
+8346 EC              462               MOV A,R4                      ;taking lower nibble back at A and jumping to @A+DP
+                             TR
+8347 73              463               JMP @A+DPTR
+                     464               
+8348 22              465     LED:  RET
+                     466               
+                     467               
+                     468               
+8349                 469     DELAY:
+8349 7C0A            470               MOV R4, #10
+834B 7E64            471               LOOP1: MOV R6, #100
+834D DEFE            472               LOOP3: DJNZ R6, LOOP3
+834F DCFA            473               DJNZ R4, LOOP1
+8351 22              474               RET
+                     475     
+FFF0                 476     ORG 0FFF0H
+FFF0 0A              477             INC R2
+FFF1 758901          478         MOV TMOD,#01H               
+FFF4 758C4C          479             MOV TH0, #4CH
+FFF7 758A04          480             MOV TL0, #04H
+FFFA D28C            481             SETB TR0
+FFFC 32              482             RETI
+                     483     
+                     484     END
+A51 MACRO ASSEMBLER  STARTUP                                                              03/24/2023 16:45:28 PAGE     9
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+CLOCK. . . . . . .  C ADDR   8227H   A   
+CSTOP. . . . . . .  C ADDR   8163H   A   
+DELAY. . . . . . .  C ADDR   8349H   A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+LED. . . . . . . .  C ADDR   8348H   A   
+LOOP . . . . . . .  C ADDR   8137H   A   
+LOOP1. . . . . . .  C ADDR   834BH   A   
+LOOP3. . . . . . .  C ADDR   834DH   A   
+PRINT. . . . . . .  C ADDR   8335H   A   
+SKIP . . . . . . .  C ADDR   817FH   A   
+STOP . . . . . . .  C ADDR   82BCH   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+UP . . . . . . . .  C ADDR   8165H   A   
+WRAP . . . . . . .  C ADDR   81D3H   A   
+WRAP1. . . . . . .  C ADDR   8225H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
